@@ -27,7 +27,7 @@ SetAlertPedBehavior = function(ped)
         Citizen.Wait(30000)
         DeleteEntity(ped)
         -- annoyed and leaves
-    elseif chance >= 71 and chance <= 85 and TK.wellness.aggression.aftertalk then
+    elseif chance >= 71 and chance <= 85 and IP.wellness.aggression.aftertalk then
         SetPedRelationshipGroupHash(ped, 'PRIVATE_SECURITY')
         SetRelationshipBetweenGroups(5, 'PRIVATE_SECURITY', 'PLAYER')
         print(chance)
@@ -45,7 +45,7 @@ SetAlertPedBehavior = function(ped)
             Citizen.Wait(30000)
             DeleteEntity(ped)
         end
-    elseif TK.wellness.aggression.onsight then
+    elseif IP.wellness.aggression.onsight then
         Citizen.Wait(math.random(3, 10))
         SetPedRelationshipGroupHash(ped, 'HATES_PLAYER')
         SetRelationshipBetweenGroups(5, 'HATES_PLAYER', 'PLAYER')
